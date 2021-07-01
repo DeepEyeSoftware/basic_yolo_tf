@@ -184,19 +184,10 @@ if __name__ == "__main__":
         train_spec = tf.estimator.TrainSpec(input_fn=lambda: my_training_fn(), max_steps=1)
         eval_spec = tf.estimator.EvalSpec(input_fn=lambda: my_training_fn(False))
 
-        #TODO: Printeaza iar os.walk
-        for root, dirs, files in os.walk("/opt/ml/input", topdown=False):
-            if 'annotations' in root or 'images' in root or 'android' in root or '.git' in root:
-                continue
-            for name in files:
-                print(os.path.join(root, name))
-            for name in dirs:
-                print(os.path.join(root, name))
-
         logging.info("Training started.")
         # # print("Training started.")
-        estimator.train(input_fn=lambda: my_training_fn(), steps=1)
-        # tf.estimator.train_and_evaluate(estimator, train_spec, eval_spec)
+        # estimator.train(input_fn=lambda: my_training_fn(), steps=1)
+        tf.estimator.train_and_evaluate(estimator, train_spec, eval_spec)
         logging.info("Training done.")
         # # print("Training done.")
         
