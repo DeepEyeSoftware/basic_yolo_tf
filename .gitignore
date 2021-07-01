@@ -1,0 +1,5 @@
+tensorflow-yolov4
+clean_yolov4/data/images
+clean_yolov4/data/annotations
+clean_yolov4/data/kite.jpg
+clean_yolov4/data/road.mp4

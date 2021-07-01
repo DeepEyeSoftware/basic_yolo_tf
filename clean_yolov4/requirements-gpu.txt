@@ -1,0 +1,12 @@
+# tensorflow-gpu==2.3.0rc0
+sagemaker
+# sagemaker-training
+opencv-python
+scikit-image
+pycocotools
+matplotlib
+easydict
+jupyter
+pillow
+tqdm
+lxml

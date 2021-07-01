@@ -1,0 +1,6 @@
+/tensorflow-yolov4/data/annotations/
+/tensorflow-yolov4/data/images/train/
+/tensorflow-yolov4/data/images/test/
+*.jpg
+*.jpeg
+**/*__pycache__

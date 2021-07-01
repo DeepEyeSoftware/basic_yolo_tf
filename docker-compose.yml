@@ -1,0 +1,11 @@
+version: "3.9"
+services:
+    deepeye:
+        build: .
+        # ports:
+        #   - "8888:8888"
+        volumes:
+          - .:/opt/ml/code
+          - ~/.aws/:/root/.aws:ro
+        env_file:
+          - tensorflow-yolov4/env-file.env
